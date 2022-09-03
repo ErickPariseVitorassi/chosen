@@ -1,3 +1,4 @@
+import 'package:chosen/chosen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -101,6 +102,18 @@ class _MyHomePageState extends State<MyHomePage> {
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
+            ),
+            const ChosenButton<String>(
+              items: [
+                ChosenMenuItem(
+                  label: "Proprietário",
+                  value: 'OWNER',
+                ),
+                ChosenMenuItem(
+                  label: "Locatário",
+                  value: 'TENANT',
+                ),
+              ],
             ),
           ],
         ),
